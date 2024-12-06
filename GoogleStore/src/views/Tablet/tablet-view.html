@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/layouts/style1.css">
+    <link rel="icon" href="https://www.gstatic.com/store/images/favicons/favicon_gstore_48px_new.png" sizes="50x50px" type="img/png">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="./app.js"></script>
+    
+   <script>
+      $(function() {
+         $("#includeHeader").load("/src/layouts/nav-bar.html");
+      });
+   </script>
+   <script>$(function() {
+    $("#includeFooter").load("/src/layouts/footer.html");
+ });
+</script>
+</head>
+<body>
+  <header id="includeHeader"></header>  
+    <main>
+      <div class="main-wrapper">
+      <div class="left-section">
+
+        <div class="left-section__bubble1">
+          <img class="left-section__bubble__img" src="/src/views/img/Tablet2.png" alt="Fitbit Poreclana">
+        </div>
+
+        <div class="left-section__bubble2">
+          <img class="left-section__bubble__img" src="/src/views/img/Tablet.png" alt="">
+        </div>
+
+        <div class="left-section__bubble3">
+          <img class="left-section__bubble__img" src="/src/views/img/Tablet3.png" alt="">
+        </div>
+        <div class="left-section__bubble3">
+          <img class="left-section__bubble__img" src="/src/views/img/Tablet4.png" alt="">
+        </div>
+
+
+      </div>
+
+      <div class="center-section">
+        <img class="center-section__img" src="/src/views/img/Tablet2.png" alt="">
+      </div>
+
+      <div class="right-section">
+        <div class="right-section__wrap">
+        <h1>Pixel Tablet</h1>
+        <p><b>Desde 339€ <del>499€</del></b></p>
+        <p>o 133,00 €/mes con 3 cuotas mensuales*</p>
+        <p>Precio de venta habitual: 499€</p>
+        <hr />
+        <h3>Selecciona tu producto</h3>
+        <div class="right-section__models">
+          
+          <button class="right-section__colors__button"><p>Solo Pixel Tablet</p><p>Desde 399€</p></button>
+          <button class="right-section__colors__button"><p>Pixel Tablet y base de carga con altavoz <br> Ahorra añadiendo la base de carga con altavoz a tu <br>compra</p><p>Desde <br>599€</p></button>
+                  
+        </div>
+        </div>
+        <div class="right-section__shipping">
+          <h2>229€</h2>
+          <hr />
+          <div class="right-section__shipping__cart">
+            <input class="right-section__shipping__cart__input" type="text" value="1" min="1" max="1">
+            <button class="right-section__shipping__cart__button"> Add to Cart</button>
+          </div>
+          <div class="right-section__shipping__date">
+            <img src="/src/views/img/Delivery.svg" alt="Delivery">
+            <p>Deliver 29 Apr to 08023</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    
+    </main>
+    
+    <footer id="includeFooter"> </footer>
+</body>

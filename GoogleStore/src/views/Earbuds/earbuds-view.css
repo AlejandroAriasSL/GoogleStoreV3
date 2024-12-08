@@ -127,19 +127,23 @@ main {
     width: 100%;
 }
 .right-section {
+    height: 70%;
+    overflow-y: auto; /* Activa el scroll vertical */
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+    -ms-overflow-style: none;
+}
+
+.text-section {
     grid-area: titleandprice;
     width: 100%;
-    height: 100%;
+    height: 30vh;
     box-shadow: 0 1px 0 #ccc; /* Línea de 2px simulada con sombra */
     margin-bottom: 30px;
 }
 .colors-section {
     grid-area: steps;
-    height: 76%; /* !!! Esto lo cambié para evitar que se deformen los colores */
-    height: calc(76vh -100px); /* Resta la altura del footer */
-    overflow-y: auto; /* Activa el scroll vertical */
-    scrollbar-width: none; /* Oculta la barra en Firefox */
-    -ms-overflow-style: none;
+    height: 40vh; /* !!! Esto lo cambié para evitar que se deformen los colores */
+    height: calc(40vh -100px); /* Resta la altura del footer */
 }
 .left-section__product {
     background: #f8f9fa;
@@ -204,7 +208,7 @@ span:active {
     flex-direction: column;
     justify-content: space-between;
     width: 400px;
-    height: 200px;
+    height: 30vh;
     background-color: #f8f9fa;
     padding: 15px;
     margin-top: 30px;

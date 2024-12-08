@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     grey: {
-      center: '/GoogleStore/src/views/img/aur_gris_gen2.png', // Imagen principal para color claro
+      center: '/GoogleStore/src/views/img/aur_gris_gen.png', // Imagen principal para color claro
       bubbles: [
-        '/GoogleStore/src/views/img/aur_gris_gen2.png', 
+        '/GoogleStore/src/views/img/aur_gris_gen.png', 
         '/GoogleStore/src/views/img/gris_front.png',
         '/GoogleStore/src/views/img/gris_side.png', 
         '/GoogleStore/src/views/img/gris_aur.png'
@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
     green: {
-      center: '/GoogleStore/src/views/img/aur_verde_gen2.png', // Imagen principal para color verde
+      center: '/GoogleStore/src/views/img/aur_verde_gen.png', // Imagen principal para color verde
       bubbles: [
-        '/GoogleStore/src/views/img/aur_verde_gen2.png', // Imagen 1 para burbuja
+        '/GoogleStore/src/views/img/aur_verde_gen.png', // Imagen 1 para burbuja
         '/GoogleStore/src/views/img/verde_front.png', // Imagen 2 para burbuja
         '/GoogleStore/src/views/img/verde_side.png', // Imagen 3 para burbuja
         '/GoogleStore/src/views/img/verde_aur.png'
@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     orange: {
-      center: '/GoogleStore/src/views/img/aur_naranja_gen2.jpg', // Imagen principal para color negro
+      center: '/GoogleStore/src/views/img/aur_naranja_gen2.png', // Imagen principal para color negro
       bubbles: [
-        '/GoogleStore/src/views/img/aur_naranja_gen2.jpg', 
+        '/GoogleStore/src/views/img/aur_naranja_gen2.png', 
         '/GoogleStore/src/views/img/naranja_front.PNG',
         '/GoogleStore/src/views/img/naranja_side.PNG', 
         '/GoogleStore/src/views/img/naranja_aur.PNG'

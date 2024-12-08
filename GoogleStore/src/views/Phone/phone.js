@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     },
     warm: {
-      center: '/GoogleStore/src/views/img/pixelPorcelana1.jpg', // Imagen principal para color claro
+      center: '/GoogleStore/src/views/img/pixelPorcelana1.png', // Imagen principal para color claro
       bubbles: [
-        '/GoogleStore/src/views/img/pixelPorcelana1.jpg', // Imagen 1 para burbuja
-        '/GoogleStore/src/views/img/pixelPorcelana2.jpg', // Imagen 2 para burbuja
-        '/GoogleStore/src/views/img/pixelPorcelana3.jpg', // Imagen 3 para burbuja
-        '/GoogleStore/src/views/img/pixelPorcelana4.jpg'
+        '/GoogleStore/src/views/img/pixelPorcelana1.png', // Imagen 1 para burbuja
+        '/GoogleStore/src/views/img/pixelPorcelana2.png', // Imagen 2 para burbuja
+        '/GoogleStore/src/views/img/pixelPorcelana3.png', // Imagen 3 para burbuja
+        '/GoogleStore/src/views/img/pixelPorcelana4.png'
       ],
     },
     obsidian: {

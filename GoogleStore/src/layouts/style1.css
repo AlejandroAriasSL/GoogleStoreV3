@@ -27,6 +27,7 @@
     display: flex;
     justify-content: space-evenly;
     background-color: #f8f9fa;
+    width: 100%;
 }
 .foot-menu__list {
     display: flex;
@@ -45,4 +46,7 @@ a:hover {
 
 footer {
     display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }

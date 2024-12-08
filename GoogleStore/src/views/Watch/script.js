@@ -16,27 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // Asociamos colores con imágenes principales y burbujas
   const imageMap = {
     dark: {
-      center: '/src/views/img/FitbitNegro1.png', // Imagen principal para color oscuro
+      center: '/GoogleStore/src/views/img/FitbitNegro1.png', // Imagen principal para color oscuro
       bubbles: [
-        '/src/views/img/FitbitNegro1.png', // Imagen 1 para burbuja
-        '/src/views/img/FitbitNegro2.png', // Imagen 2 para burbuja
-        '/src/views/img/FitbitNegro3.png', // Imagen 3 para burbuja
+        '/GoogleStore/src/views/img/FitbitNegro1.png', // Imagen 1 para burbuja
+        '/GoogleStore/src/views/img/FitbitNegro2.png', // Imagen 2 para burbuja
+        '/GoogleStore/src/views/img/FitbitNegro3.png', // Imagen 3 para burbuja
       ],
     },
     light: {
-      center: '/src/views/img/FitbitPorcelana1.png', // Imagen principal para color claro
+      center: '/GoogleStore/src/views/img/FitbitPorcelana1.png', // Imagen principal para color claro
       bubbles: [
-        '/src/views/img/FitbitPorcelana1.png', // Imagen 1 para burbuja
-        '/src/views/img/FitbitPorcelana2.png', // Imagen 2 para burbuja
-        '/src/views/img/FitbitPorcelana3.png', // Imagen 3 para burbuja
+        '/GoogleStore/src/views/img/FitbitPorcelana1.png', // Imagen 1 para burbuja
+        '/GoogleStore/src/views/img/FitbitPorcelana2.png', // Imagen 2 para burbuja
+        '/GoogleStore/src/views/img/FitbitPorcelana3.png', // Imagen 3 para burbuja
       ],
     },
     warm: {
-      center: '/src/views/img/FitbitNaranja1.png', // Imagen principal para color cálido
+      center: '/GoogleStore/src/views/img/FitbitNaranja1.png', // Imagen principal para color cálido
       bubbles: [
-        '/src/views/img/FitbitNaranja1.png', // Imagen 1 para burbuja
-        '/src/views/img/FitbitNaranja2.png', // Imagen 2 para burbuja
-        '/src/views/img/FitbitNaranja3.png', // Imagen 3 para burbuja
+        '/GoogleStore/src/views/img/FitbitNaranja1.png', // Imagen 1 para burbuja
+        '/GoogleStore/src/views/img/FitbitNaranja2.png', // Imagen 2 para burbuja
+        '/GoogleStore/src/views/img/FitbitNaranja3.png', // Imagen 3 para burbuja
       ],
     },
   };

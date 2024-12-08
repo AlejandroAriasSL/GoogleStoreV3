@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Store</title>
+    <link rel="stylesheet" href="phone-view.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/layouts/style1.css">
+    <link rel="icon" href="https://www.gstatic.com/store/images/favicons/favicon_gstore_48px_new.png" sizes="50x50px" type="img/png">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="./phone.js"></script>
+    
+   <script>
+      $(function() {
+         $("#includeHeader").load("/GoogleStore/src/layouts/nav-bar.html");
+      });
+   </script>
+   <script>$(function() {
+    $("#includeFooter").load("/GoogleStore/src/layouts/footer.html");
+ });
+</script>
+</head>
+<body>
+  <header id="includeHeader"></header> 
+  <main>
+    <section class="main-section">
+        <section class="main-section__arrow">
+            <div class="main-section__arrow__img">
+                <img src="/GoogleStore/src/views/img/Arrow.svg" alt="Arrow">
+                <p>See product details</p>
+            </div>
+        </section>
+        <section class="main-section__center">
+            <section class="left-section">
+                <div class="left-section__wrapper">
+        
+        
+                    <div class="left-section__container">
+                        <nav class="left-section__nav">
+                            <ul class="left-section__bubbles">
+                                <li>
+                                    <img src="/GoogleStore/src/views/img/PixelRosa1.png" class="left-section__bubbles__img"
+                                        alt="Vista previa 1" />
+                                </li>
+                                <li>
+                                    <img src="/GoogleStore/src/views/img/PixelRosa2.png" class="left-section__bubbles__img"
+                                        alt="Vista previa 2" />
+                                </li>
+                                <li>
+                                    <img src="/GoogleStore/src/views/img/PixelRosa3.png" class="left-section__bubbles__img"
+                                        alt="Vista previa 3" />
+                                </li>
+                                <li>
+                                    <img src="/GoogleStore/src/views/img/PixelRosa4.png" class="left-section__bubbles__img"
+                                        alt="Vista previa 3" />
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="left-section__product">
+                        <div class="left-section__product__bg"><img class="left-section__img"
+                                src="/GoogleStore/src/views/img/PixelRosa1.png" alt="Pixel Rosa"></div>
+        
+                    </div>
+                </div>
+            </section>
+            <section class="scroll-section"></section>
+            <section class="right-section">
+                <section>
+                    <h1>Pixel 9</h1>
+                    <p>
+                        <div>
+                            <span>Desde 799€ <del>899€</del></span>
+                        </div>
+                        <div>o 266,3 €/mes con 3 cuotas mensuales*
+                        </div>
+                        <div>Precio de venta habitual: 899€
+                        </div>
+                    </p>
+                </section>
+            </section>
+            <section class="colors-section">
+                <section class="colors-section__options">
+                    <section class="colors-section__wrapper">
+                        <h2>Elige un color</h2>
+                        <section class="colors-section__container">
+                            <section class="colors-section__container__options">
+                                <button class="colors-section__button">
+                                    <div class="colors-section__button__color" data-color="pink" style="background-color: #EF89A1;"></div>
+                                </button>
+                                <section>Rosa Peonía</section>
+                            </section>
+                            <section class="colors-section__container__options">
+                                <button class="colors-section__button">
+                                    <div class="colors-section__button__color" data-color="green" style="background-color: #D7EAD7;"></div>
+            
+                                </button>
+                                <section>Verde Pastel</section>
+                            </section>
+                            <section class="colors-section__container__options">
+                                <button class="colors-section__button">
+                                    <div class="colors-section__button__color" style="background-color: #EFEBE8;"></div>
+                                </button>
+                                <section>Porcelana</section>
+                            </section>
+                            <section class="colors-section__container__options">
+                                <button class="colors-section__button">
+                                    <div class="colors-section__button__color" data-color="obsidian" style="background-color: #343434;"></div>
+                                </button>
+                                <section>Obsidiana</section>
+                            </section>
+            
+                        </section>
+                    </section>
+                </section>
+                <section class="storage-section">
+                    <h2>Elige tu espacio de almacenamiento</h2>
+                    <section class="storage-section__wrapper">
+                        <section class="storage-section__block">
+                             <button class="storage__button">
+                                <section>128 GB</section>
+                                <section>799€</section>
+                             </button>      
+                        </section>
+                        <section class="storage-section__block">
+                             <button class="storage__button">
+                                <section>256 GB</section>
+                                <section>899€</section>
+                             </button>   
+                        </section>
+                    </section>
+                </section>
+                <section>
+                    <div class="right-section__shipping">
+                        <h2>799€</h2>
+                        <hr />
+                        <div class="right-section__shipping__cart">
+                          <input class="right-section__shipping__cart__input" type="text" value="0" min="0" max="1">
+                          <button class="right-section__shipping__cart__button"> Add to Cart</button>
+                        </div>
+                        <div class="right-section__shipping__date">
+                          <img src="/GoogleStore/src/views/img/Delivery.svg" alt="Delivery"> <p>Deliver 29 Apr to</p> <form id="postalCodeForm">
+                            <input type="text" id="postalCode" placeholder="08023" minlength="5" maxlength="5" required>
+                          </form><p id="output"></p>
+                        </div>
+                        
+                      </div>
+                </section>
+            </section>
+        </section>
+   
+            </section>
+
+    </section>
+  </main>
+  <footer id="includeFooter"></footer> 

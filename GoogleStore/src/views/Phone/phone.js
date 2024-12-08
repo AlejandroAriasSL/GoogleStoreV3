@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Asociamos colores con imágenes principales y burbujas
   const imageMap = {
     pink: {
-      center: '/GoogleStore/src/views/img/PixelRosa1.png', // Imagen principal para color oscuro
+      center: '/GoogleStore/src/views/img/PixelRosa1.png', // Imagen principal para color rosa
       bubbles: [
         '/GoogleStore/src/views/img/PixelRosa1.png', // Imagen 1 para burbuja
         '/GoogleStore/src/views/img/PixelRosa2.png', // Imagen 2 para burbuja
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     },
     green: {
-      center: '/GoogleStore/src/views/img/PixelVerde1.png', // Imagen principal para color claro
+      center: '/GoogleStore/src/views/img/PixelVerde1.png', // Imagen principal para color verde
       bubbles: [
         '/GoogleStore/src/views/img/PixelVerde1.png', // Imagen 1 para burbuja
         '/GoogleStore/src/views/img/PixelVerde2.png', // Imagen 2 para burbuja
@@ -33,8 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
         '/GoogleStore/src/views/img/PixelVerde4.png'
       ],
     },
+    warm: {
+      center: '/GoogleStore/src/views/img/pixelPorcelana1.jpg', // Imagen principal para color claro
+      bubbles: [
+        '/GoogleStore/src/views/img/pixelPorcelana1.jpg', // Imagen 1 para burbuja
+        '/GoogleStore/src/views/img/pixelPorcelana2.jpg', // Imagen 2 para burbuja
+        '/GoogleStore/src/views/img/pixelPorcelana3.jpg', // Imagen 3 para burbuja
+        '/GoogleStore/src/views/img/pixelPorcelana4.jpg'
+      ],
+    },
     obsidian: {
-      center: '/GoogleStore/src/views/img/PixelObsidiana1.png', // Imagen principal para color cálido
+      center: '/GoogleStore/src/views/img/PixelObsidiana1.png', // Imagen principal para color negro
       bubbles: [
         '/GoogleStore/src/views/img/PixelObsidiana1.png', // Imagen 1 para burbuja
         '/GoogleStore/src/views/img/PixelObsidiana2.png', // Imagen 2 para burbuja

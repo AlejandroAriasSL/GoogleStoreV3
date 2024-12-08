@@ -93,7 +93,7 @@ main {
     height: 100%;
 }
 .left-section__product__bg{
-    background: #f8f9fa;
+    background-color: #f8f9fa;
     border-radius: 34px;
     display: flex;
     justify-content: center;

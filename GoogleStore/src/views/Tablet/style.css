@@ -65,9 +65,11 @@ body {
     justify-content: space-between;
     height: 60px;
     border-radius: 10px;
-    border: 1px solid #00000096;
+    border: 1px solid #c5c2c2;
     background-color: #f5f5f5;
     cursor: pointer;
+    font-family: "Inter", serif;
+
 }
 .right-section__shipping {
     display: flex;

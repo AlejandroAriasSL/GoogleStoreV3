@@ -16,27 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // Asociamos colores con imágenes principales y burbujas
   const imageMap = {
     dark: {
-      center: '/GoogleStore/src/views/img/FitbitNegro1.png', // Imagen principal para color oscuro
+      center: '../img/FitbitNegro1.png', // Imagen principal para color oscuro
       bubbles: [
-        '/GoogleStore/src/views/img/FitbitNegro1.png', // Imagen 1 para burbuja
-        '/GoogleStore/src/views/img/FitbitNegro2.png', // Imagen 2 para burbuja
-        '/GoogleStore/src/views/img/FitbitNegro3.png', // Imagen 3 para burbuja
+        '../img/FitbitNegro1.png', // Imagen 1 para burbuja
+        '../img/FitbitNegro2.png', // Imagen 2 para burbuja
+        '../img/FitbitNegro3.png', // Imagen 3 para burbuja
       ],
     },
     light: {
-      center: '/GoogleStore/src/views/img/FitbitPorcelana1.png', // Imagen principal para color claro
+      center: '../img/FitbitPorcelana1.png', // Imagen principal para color claro
       bubbles: [
-        '/GoogleStore/src/views/img/FitbitPorcelana1.png', // Imagen 1 para burbuja
-        '/GoogleStore/src/views/img/FitbitPorcelana2.png', // Imagen 2 para burbuja
-        '/GoogleStore/src/views/img/FitbitPorcelana3.png', // Imagen 3 para burbuja
+        '../img/FitbitPorcelana1.png', // Imagen 1 para burbuja
+        '../img/FitbitPorcelana2.png', // Imagen 2 para burbuja
+        '../img/FitbitPorcelana3.png', // Imagen 3 para burbuja
       ],
     },
     warm: {
-      center: '/GoogleStore/src/views/img/FitbitNaranja1.png', // Imagen principal para color cálido
+      center: '../img/FitbitNaranja1.png', // Imagen principal para color cálido
       bubbles: [
-        '/GoogleStore/src/views/img/FitbitNaranja1.png', // Imagen 1 para burbuja
-        '/GoogleStore/src/views/img/FitbitNaranja2.png', // Imagen 2 para burbuja
-        '/GoogleStore/src/views/img/FitbitNaranja3.png', // Imagen 3 para burbuja
+        '../img/FitbitNaranja1.png', // Imagen 1 para burbuja
+        '../img/FitbitNaranja2.png', // Imagen 2 para burbuja
+        '../img/FitbitNaranja3.png', // Imagen 3 para burbuja
       ],
     },
   };
@@ -61,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+
+  
   const form = document.getElementById('postalCodeForm');                        // Añadimos un evento 'submit' al formulario
   form.addEventListener('submit', (event) => {
     // Evitamos el comportamiento predeterminado del formulario (recargar la página)

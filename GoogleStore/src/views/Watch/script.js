@@ -16,27 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // Asociamos colores con imágenes principales y burbujas
   const imageMap = {
     dark: {
-      center: '../img/FitbitNegro1.png', // Imagen principal para color oscuro
+      center: '../img/FitbitInspire3Negro1.jpg', // Imagen principal para color oscuro
       bubbles: [
-        '../img/FitbitNegro1.png', // Imagen 1 para burbuja
-        '../img/FitbitNegro2.png', // Imagen 2 para burbuja
-        '../img/FitbitNegro3.png', // Imagen 3 para burbuja
+        '../img/FitbitInspire3Negro1.jpg', // Imagen 1 para burbuja
+        '../img/FitbitInspire3Negro2.jpg', // Imagen 2 para burbuja
+        '../img/FitbitInspire3Negro3.jpg', // Imagen 3 para burbuja
       ],
     },
     light: {
-      center: '../img/FitbitPorcelana1.png', // Imagen principal para color claro
+      center: '../img/FitbitInspire3Rosa1.jpg', // Imagen principal para color claro
       bubbles: [
-        '../img/FitbitPorcelana1.png', // Imagen 1 para burbuja
-        '../img/FitbitPorcelana2.png', // Imagen 2 para burbuja
-        '../img/FitbitPorcelana3.png', // Imagen 3 para burbuja
+        '../img/FitbitInspire3Rosa1.jpg', // Imagen 1 para burbuja
+        '../img/FitbitInspire3Rosa2.jpg', // Imagen 2 para burbuja
+        '../img/FitbitInspire3Rosa3.jpg', // Imagen 3 para burbuja
       ],
     },
     warm: {
-      center: '../img/FitbitNaranja1.png', // Imagen principal para color cálido
+      center: '../img/FitbitInspire3Naranja1.jpg', // Imagen principal para color cálido
       bubbles: [
-        '../img/FitbitNaranja1.png', // Imagen 1 para burbuja
-        '../img/FitbitNaranja2.png', // Imagen 2 para burbuja
-        '../img/FitbitNaranja3.png', // Imagen 3 para burbuja
+        '../img/FitbitInspire3Naranja1.jpg', // Imagen 1 para burbuja
+        '../img/FitbitInspire3Naranja2.jpg', // Imagen 2 para burbuja
+        '../img/FitbitInspire3Naranja3.jpg', // Imagen 3 para burbuja
       ],
     },
   };

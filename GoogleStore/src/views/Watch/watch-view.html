@@ -54,28 +54,44 @@
       <div class="right-section">
         <div class="right-section__wrap">
           <h1>Fitbit</h1>
-          <p>Hora & Tiempo</p>
+          <p>Health & Fitness Tracker</p>
           <h3>229€</h3>
           <hr />
-          <div class="right-section__colors">
+          <!-- <div class="right-section__colors">
             <span class="right-section__colors__options" data-color="dark" style="background-color: #363535"></span>
             <span class="right-section__colors__options" data-color="light" style="background-color: #d9d7d7"></span>
             <span class="right-section__colors__options" data-color="warm" style="background-color: #d28860"></span>
-          </div>
+          </div> -->
+          <p>Choose a color</p>
+
+          <section class="right-section__colors">
+            <section class="colors-section__container__options">
+                <button class="colors-section__button">
+                  <img class="right-section__colors__options" data-color="light" src="../img/FitbitPorcelana1.png" alt="Fitbit Porcelana" />
+                </button>
+            </section>
+            <section class="colors-section__container__options">
+                <button class="colors-section__button">
+                  <img class="right-section__colors__options" data-color="warm" src="../img/FitbitNaranja1.png" alt="Fitbit Naranja" />
+
+                </button>
+            </section>
+            <section class="colors-section__container__options">
+                <button class="colors-section__button">
+                  <img class="right-section__colors__options"  data-color="dark"  src="../img/FitbitNegro1.png" alt="Fitbit Negro" />
+                </button>
+            </section>
+        </section>
         </div>
         <div class="right-section__shipping">
           <h2>229€</h2>
           <hr />
           <div class="right-section__shipping__cart">
-            <form action="post" id="shippingCart">
-              <div id="productName" style="display: none">Fitbit</div>
-              <div id="productPrice" style="display: none">229</div>
               <input class="right-section__shipping__cart__input" type="number" value="0" min="0" max="1"
                 id="quantity" />
               <button class="right-section__shipping__cart__button" id="add" type="button">
                 Add to Cart
               </button>
-            </form>
           </div>
           <div class="right-section__shipping__date">
             <img src="../img/Delivery.svg" alt="Delivery" />

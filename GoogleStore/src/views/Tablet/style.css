@@ -69,7 +69,21 @@ body {
     background-color: #f5f5f5;
     cursor: pointer;
     font-family: "Inter", serif;
-
+}
+.right-section__colors__div{
+    display: flex;
+    flex-direction: column;
+}
+.right-section__button2{
+    display: block;
+    unicode-bidi: isolate;
+    flex-direction: column;
+}
+.right-section__text1{
+   text-align: left;
+}
+.right-section__text2{
+   font-size: 11px;
 }
 .right-section__shipping {
     display: flex;

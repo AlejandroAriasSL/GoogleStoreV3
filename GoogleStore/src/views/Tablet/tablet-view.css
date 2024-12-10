@@ -1,10 +1,10 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
+    list-style: none;
 }
 body {
     display: flex;
@@ -29,11 +29,12 @@ main {
     display: flex;
     flex-direction: column;
     background-color: #ffff;
-    gap: 30px;
+    gap: 50px;
     max-width: 1440px;
     width: 90%;
-    height: 90%;
+    height: 100vh;
     margin: 0 auto;
+    position: relative;
     top: 0;
 }
 
@@ -77,6 +78,20 @@ main {
     height: 100%;
     justify-content: center;
 }
+.left-section__nav {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+.left-section__product {
+    background-color: none;
+    justify-content: center;
+    display: flex;
+    min-height: 9vh;
+    width: 80%;
+    flex: 1;
+    height: 100%;
+}
 .left-section__product__bg{
     background: #f8f9fa;
     border-radius: 34px;
@@ -85,11 +100,14 @@ main {
     width: 100%;
 }
 .left-section__bubbles__img {
+    position: relative;
+    top: 0;
     height: 50px;
     width: 50px;
     max-height: 50px;
     border-radius: 50%;
     border: 1px solid #dcdbdb;
+
 }
 .left-section__wrapper {
     display: flex;
@@ -100,9 +118,10 @@ main {
     scrollbar-width: none; /* Oculta la barra en Firefox */
     -ms-overflow-style: none;
     position: absolute;
-    margin-right: 9px;
+    top: 5%;
 }
 .left-section__img {
+    min-height: 490px;
     max-width: 700px;
     max-height: 500px;
     width: 100%;
@@ -124,9 +143,8 @@ main {
 }
 .colors-section {
     grid-area: steps;
-    overflow-y: auto; /* Activa el scroll vertical */
-    scrollbar-width: none; /* Oculta la barra en Firefox */
-    -ms-overflow-style: none;
+    height: 76vh;
+    height: calc(76vh -100px); /* Resta la altura del footer */
 }
 .left-section__product {
     background: #f8f9fa;
@@ -136,10 +154,12 @@ main {
 }
 
 .colors-section__container {
+    align-items: stretch;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 8px;
     overflow-wrap: break-word;
+
 }
 .colors-section__wrapper {
     display: flex;
@@ -148,6 +168,7 @@ main {
     margin-top: 60px;
     padding-bottom: 45px;
     box-shadow: 0 1px 0 #ccc; /* Línea de 2px simulada con sombra */
+    
 }
 
 .colors-section__container__options {
@@ -173,38 +194,43 @@ main {
     border-radius: 100%;
 }
 
+/*.left-section__wrapper {
+    border: 2px dashed red;
+}*/
+
 h1 {
     font-size: 35px;
     margin: 0;
 }
 
-button.selected {
+button:active {
     border: 1px solid #1967d2;
     box-shadow: 0 0 0 1px #1967d2;
+    background-color: #fff;
 }
 
 /*Estilos de la sección de almacenamiento */
-.storage-section {
+.option-section {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
 }
-.storage-section__wrapper {
+.option-section__wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100%;
     margin-top: 10px;
     gap: 10px;
     padding-bottom: 45px;
     box-shadow: 0 1px 0 #ccc;
 }
-.storage-section__block{
+.option-section__block{
     width: 100%;
 }
-.storage__button {
+.option__button {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     gap: 8px;
     width: 100%;
@@ -215,11 +241,8 @@ button.selected {
     border: 1px solid #dadce0;
     cursor: pointer;
 }
-.storage__button:disabled {
-    cursor: not-allowed;
-}
-.storage-section > h2 {
-    display: inline-block;
+.option-section > h2 {
+ 
     white-space: nowrap
 }
 
@@ -250,9 +273,6 @@ button.selected {
     border: #1A73E8;
     cursor: pointer;
 }
-.right-section__shipping__cart__button:disabled{
-    cursor: not-allowed;
-}
 .right-section__shipping__date {
     display: flex;
     gap: 7px;
@@ -261,43 +281,15 @@ button.selected {
 #postalCode {
     border: none;
     background: transparent;
-    color: #1A73E8;
+    color: #1A73E8
+  ;
     justify-content: left;
-}
+  }
 
-h2 {
+  h2 {
     font-weight: 700;
     font-size: 20px;
     
-}
-@media only screen and (max-width: 480px) {
-    .main-section__center {
-        grid-template-areas:
-            "carousel"
-            "titleandprice"
-            "steps";
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-    }
-    .right-section {
-        text-align: left;
-    }
-    .colors-section {
-        text-align: left;
-    }
-    .left-section__product__bg {
-        width: 100%;
-    }
-    .left-section__container {
-        width: 0;
-    }
-    .left-section__wrapper {
-        justify-content: center;
-        margin: 0px;
-    }
-    .left-section__img {
-        max-width: 300px;
-        max-height: 200px;
-    }
+  }
 
-}
+

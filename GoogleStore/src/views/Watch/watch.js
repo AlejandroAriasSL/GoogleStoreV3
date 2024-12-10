@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let contador = null;
+
+  // Usar un setInterval para verificar si el elemento contador existe
+  const checkContadorInterval = setInterval(function() {
+    contador = document.getElementById("contador");
+
+    if (contador) {
+
+      contador.hidden = true;
+      // Si se encuentra el elemento, llamar a la función
+      actualizarContador();
+      clearInterval(checkContadorInterval); // Detener la verificación una vez encontrado
+    }
+  }, 100);
+  
+  
   // Seleccionamos las miniaturas (burbujas) y la imagen principal
   const thumbnails = document.querySelectorAll(".left-section__bubbles__img");
   const centerImage = document.querySelector(".left-section__img");
@@ -39,18 +55,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const buttons = document.querySelectorAll(".colors-section__button");
+const colorButtons = document.querySelectorAll(".colors-section__button");
+const shippingButton = document.querySelector(".right-section__shipping__cart__button");
 
-buttons.forEach(button => {
+let producto = 0;
+
+function enableShippingButton() {
+  // Habilitar el botón de "Add to Cart"
+  shippingButton.removeAttribute("disabled");
+}
+
+function actualizarContador() {
+shippingButton.addEventListener('click', () => {
+producto++;
+if (producto > 0) {
+  contador.hidden = false;
+}
+contador.textContent = producto;
+});
+}
+
+colorButtons.forEach(button => {
     button.addEventListener("click", () => {
-        // Quitar la clase "active" de todos los botones
-        buttons.forEach(btn => btn.classList.remove("active"));
-        
-        // Añadir la clase "active" al botón presionado
-        button.classList.add("active");
+        // Eliminar la clase 'selected' de todos los botones de color
+        colorButtons.forEach(btn => btn.classList.remove("selected"));
+
+        // Agregar la clase 'selected' al botón que fue clicado
+        button.classList.add("selected");
+
+        // Habilitar los botones de almacenamiento
+        enableShippingButton();
     });
 });
-
 
 
   const form = document.getElementById('postalCodeForm');                        // Añadimos un evento 'submit' al formulario

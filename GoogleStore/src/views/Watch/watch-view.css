@@ -24,7 +24,6 @@ main {
     justify-content: center;
 }
 
-/*Sección general, contenedor */
 
 .main-section {
     display: flex;
@@ -213,7 +212,6 @@ button.selected {
 }
 
 
-/*Estilos de sección de compra */
 
 .right-section__shipping {
     display: flex;

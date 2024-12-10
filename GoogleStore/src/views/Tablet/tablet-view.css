@@ -25,7 +25,6 @@ main {
     top: 7%;
 }
 
-/*Sección general, contenedor */
 
 .main-section {
     display: flex;
@@ -126,18 +125,18 @@ main {
     max-height: 500px;
     width: 100%;
 }
- /* CAMBIOS SCROLL */ 
+
 .right-section {
-    overflow-y: auto; /* Activa el scroll vertical */
-    scrollbar-width: none; /* Oculta la barra en Firefox */
+    overflow-y: auto; 
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-.text-section { /* CAMBIO SCROLL */
+.text-section { 
     grid-area: titleandprice;
     width: 100%;
     height: 25%;
-    box-shadow: 0 1px 0 #ccc; /* Línea de 2px simulada con sombra */
+    box-shadow: 0 1px 0 #ccc;
     margin-bottom: 30px;
     
 }
@@ -166,7 +165,7 @@ main {
     gap: 15px;
     margin-top: 60px;
     padding-bottom: 45px;
-    box-shadow: 0 1px 0 #ccc; /* Línea de 2px simulada con sombra */
+    box-shadow: 0 1px 0 #ccc; 
     
 }
 
@@ -204,7 +203,7 @@ button.selected {
     box-shadow: 0 0 0 1px #1967d2;
 }
 
-/*Estilos de la sección de almacenamiento */
+
 .option-section {
     display: flex;
     flex-direction: column;
@@ -248,7 +247,7 @@ button.selected {
     white-space: nowrap
 }
 
-/*Estilos de sección de compra */
+
 
 .right-section__shipping {
     display: flex;

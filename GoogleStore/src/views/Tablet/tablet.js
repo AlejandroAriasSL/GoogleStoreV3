@@ -80,7 +80,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
   });
+ 
+  document.addEventListener('DOMContentLoaded', () => {
+    let contador = null;
   
+    // Usar un setInterval para verificar si el elemento contador existe
+    const checkContadorInterval = setInterval(function() {
+      contador = document.getElementById("contador");
+  
+      if (contador) {
+  
+        contador.hidden = true;
+        // Si se encuentra el elemento, llamar a la función
+        actualizarContador();
+        clearInterval(checkContadorInterval); // Detener la verificación una vez encontrado
+      }
+    }, 100); // Verificar cada 100ms // Verificar cada 100ms
+
   const colorButtons = document.querySelectorAll(".colors-section__button");
 
 // Seleccionar los botones de almacenamiento, el botón de envío y el precio
@@ -144,7 +160,7 @@ storageButtons.forEach(storageButton => {
         storageButton.classList.add("selected");
 
         // Obtener el precio que está en la segunda sección del botón (el precio)
-        const price = storageButton.querySelectorAll(".storage__button__section")[1].textContent;
+        const price = storageButton.querySelectorAll(".option__button__section")[1].textContent;
 
         // Actualizar el precio de envío con el precio del botón seleccionado
         updateShippingPrice(price);
@@ -152,4 +168,5 @@ storageButtons.forEach(storageButton => {
         // Habilitar el botón de "Add to Cart"
         enableShippingButton();
     });
+});
 });

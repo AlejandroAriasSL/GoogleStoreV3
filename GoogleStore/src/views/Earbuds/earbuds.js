@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let contador = null;
+
+  // Usar un setInterval para verificar si el elemento contador existe
+  const checkContadorInterval = setInterval(function() {
+    contador = document.getElementById("contador");
+
+    if (contador) {
+
+      contador.hidden = true;
+      // Si se encuentra el elemento, llamar a la función
+      actualizarContador();
+      clearInterval(checkContadorInterval); // Detener la verificación una vez encontrado
+    }
+  }, 100); // Verificar cada 100ms
+
+
   // Seleccionamos las miniaturas (burbujas) y la imagen principal
   const thumbnails = document.querySelectorAll(".left-section__bubbles__img");
   const centerImage = document.querySelector(".left-section__img");
@@ -94,46 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const buttons = document.querySelectorAll(".colors-section__button");
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-      // Quitar la clase "active" de todos los botones
-      buttons.forEach(btn => btn.classList.remove("active"));
-      
-      // Añadir la clase "active" al botón presionado
-      button.classList.add("active");
-  });
-});
-
-// Código postal
-  const form = document.getElementById('postalCodeForm');                        // Añadimos un evento 'submit' al formulario
-  form.addEventListener('submit', (event) => {
-    // Evitamos el comportamiento predeterminado del formulario (recargar la página)
-    event.preventDefault();                            // Obtenemos el valor del código postal
-    const postalCode = document.getElementById('postalCode').value;                            // Validamos o procesamos el código postal
-    if (postalCode.trim() === '') {
-        document.getElementById('output').textContent = 'Por favor, ingresa un código postal.';
-    }
-});
-});
-
-const colorButtons = document.querySelectorAll(".colors-section__button");
+const colorButtons = document.querySelectorAll(".right-section__colors__options");
 
 // Seleccionar los botones de almacenamiento, el botón de envío y el precio
-const storageButtons = document.querySelectorAll(".storage__button");
 const shippingButton = document.querySelector(".right-section__shipping__cart__button");
-const productPrice = document.getElementById("product-price"); // Asumimos que el ID del h2 de precio es "product-price"
+
 let producto = 0;
-// Función para manejar la habilitación de los botones de almacenamiento
-function enableStorageButtons() {
-    storageButtons.forEach(storageButton => {
-        // Si un color ha sido seleccionado, habilitar los botones de almacenamiento
-        if (!storageButton.classList.contains("selected")) {
-            storageButton.removeAttribute("disabled");
-        }
-    });
-}
+
 
 // Función para habilitar el botón de envío
 function enableShippingButton() {
@@ -141,11 +125,6 @@ function enableShippingButton() {
     shippingButton.removeAttribute("disabled");
 }
 
-// Función para actualizar el precio de envío
-function updateShippingPrice(price) {
-    // Actualizar el contenido del h2 con el nuevo precio
-    productPrice.textContent = price;
-}
 function actualizarContador() {
   shippingButton.addEventListener('click', () => {
   producto++;
@@ -167,26 +146,18 @@ colorButtons.forEach(button => {
         button.classList.add("selected");
 
         // Habilitar los botones de almacenamiento
-        enableStorageButtons();
+        enableShippingButton();
     });
 });
 
-// Agregar un evento de clic a cada botón de almacenamiento
-storageButtons.forEach(storageButton => {
-    storageButton.addEventListener("click", () => {
-        // Eliminar la clase 'selected' de todos los botones de almacenamiento
-        storageButtons.forEach(btn => btn.classList.remove("selected"));
-        
-        // Marcar el botón de almacenamiento como seleccionado
-        storageButton.classList.add("selected");
-
-        // Obtener el precio que está en la segunda sección del botón (el precio)
-        const price = storageButton.querySelectorAll(".storage__button__section")[1].textContent;
-
-        // Actualizar el precio de envío con el precio del botón seleccionado
-        updateShippingPrice(price);
-
-        // Habilitar el botón de "Add to Cart"
-        enableShippingButton();
-    });
+// Código postal
+const form = document.getElementById('postalCodeForm');                        // Añadimos un evento 'submit' al formulario
+form.addEventListener('submit', (event) => {
+  // Evitamos el comportamiento predeterminado del formulario (recargar la página)
+  event.preventDefault();                            // Obtenemos el valor del código postal
+  const postalCode = document.getElementById('postalCode').value;                            // Validamos o procesamos el código postal
+  if (postalCode.trim() === '') {
+      document.getElementById('output').textContent = 'Por favor, ingresa un código postal.';
+  }
+});
 });

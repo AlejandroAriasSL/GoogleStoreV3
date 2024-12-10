@@ -37,10 +37,14 @@
 }
 .foot-menu__list {
     display: flex;
+    justify-content: center;
     width: 100%;
     gap: 15px;
     font-size: 8px;
-    text-align: center;
+}
+.foot-menu__list__items {
+    display: flex;
+    align-items: center;
 }
 a:not(:hover) {
     color: #57626b;
@@ -50,7 +54,6 @@ a:hover {
     color: #1a73e8;
     text-decoration: none;
 }
-
 .carrito-img {
     position: relative;
     display: inline-block;
@@ -147,8 +150,6 @@ a:hover {
     }
     #contador {
         right: 103px;
-
-    
     }
     
 }

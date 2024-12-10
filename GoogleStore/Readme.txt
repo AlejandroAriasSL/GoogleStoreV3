@@ -16,6 +16,6 @@ Vasco Teixeira
 
 Expresiones de Gratitud 🎁
 A Google por poder replicar su Store 📢
-Invitación a un café ☕ a Alehandro por todas las horas de optimización y desarrollo.
+Invitación a un café ☕ a Alejandro por todas las horas de optimización y desarrollo.
 Gracias a todxs lxs que entrais a verlo 🤓.
 

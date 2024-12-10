@@ -1,8 +1,11 @@
+* {
+    list-style: none;
+    font-family: "Inter", sans-serif;
+}
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 .menu__list__logo {
     height: auto;
@@ -22,12 +25,14 @@
 .menu__icons > li{
     padding: 15px;
 }
-
+.menu__icons__right {
+    display: flex;
+    position: relative;
+}
 .foot-menu {
     display: flex;
     justify-content: space-evenly;
     background-color: #f8f9fa;
-    width: 100%;
 }
 .foot-menu__list {
     display: flex;
@@ -44,9 +49,30 @@ a:hover {
     text-decoration: none;
 }
 
-footer {
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.carrito-img {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+#contador {
+    z-index: 2;
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    background-color: rgb(223, 33, 33);
+    border: 1px solid white;
+    border-color: white;
+    color: white;
+    text-align: center;
+    border-radius: 13px;
+    height: 17px;
+    width: 21px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+}
+#contador[hidden] {
+    display: none;
 }

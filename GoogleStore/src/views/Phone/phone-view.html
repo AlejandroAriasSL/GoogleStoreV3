@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Store</title>
+    <link rel="stylesheet" href="/GoogleStore/src/views/Phone/mediaqueries.css">
     <link rel="stylesheet" href="phone-view.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/layouts/style1.css">
+    <link rel="stylesheet" href="/GoogleStore/src/layouts/style1.css">
     <link rel="icon" href="https://www.gstatic.com/store/images/favicons/favicon_gstore_48px_new.png" sizes="50x50px" type="img/png">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="./phone.js"></script>
@@ -60,7 +61,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="left-section__product">
+                  <!----->  <div class="left-section__product">
                         <div class="left-section__product__bg"><img class="left-section__img"
                                 src="/GoogleStore/src/views/img/PixelRosa1.png" alt="Pixel Rosa"></div>
         
@@ -68,8 +69,8 @@
                 </div>
             </section>
             <section class="scroll-section"></section>
-            <section class="right-section">
-                <section>
+            <section class="right-section"> <!-- CAMBIO PARA SCROLL-->
+                <section class="text-section">
                     <h1>Pixel 9</h1>
                     <p>
                         <div>
@@ -81,7 +82,7 @@
                         </div>
                     </p>
                 </section>
-            </section>
+            
             <section class="colors-section">
                 <section class="colors-section__options">
                     <section class="colors-section__wrapper">
@@ -102,7 +103,7 @@
                             </section>
                             <section class="colors-section__container__options">
                                 <button class="colors-section__button">
-                                    <div class="colors-section__button__color" style="background-color: #EFEBE8;"></div>
+                                    <div class="colors-section__button__color" data-color="warm" style="background-color: #EFEBE8;"></div>
                                 </button>
                                 <section>Porcelana</section>
                             </section>
@@ -120,26 +121,26 @@
                     <h2>Elige tu espacio de almacenamiento</h2>
                     <section class="storage-section__wrapper">
                         <section class="storage-section__block">
-                             <button class="storage__button">
-                                <section>128 GB</section>
-                                <section>799€</section>
+                             <button class="storage__button" disabled> 
+                                <section class="storage__button__section" id="storage1">128 GB</section>
+                                <section class="storage__button__section">799€</section>
                              </button>      
                         </section>
                         <section class="storage-section__block">
-                             <button class="storage__button">
-                                <section>256 GB</section>
-                                <section>899€</section>
+                             <button class="storage__button" id="storage2" disabled>
+                                <section class="storage__button__section" >256 GB</section>
+                                <section class="storage__button__section" >899€</section>
                              </button>   
                         </section>
                     </section>
                 </section>
                 <section>
                     <div class="right-section__shipping">
-                        <h2>799€</h2>
+                        <h2 id="product-price">799€</h2>
                         <hr />
                         <div class="right-section__shipping__cart">
-                          <input class="right-section__shipping__cart__input" type="text" value="0" min="0" max="1">
-                          <button class="right-section__shipping__cart__button"> Add to Cart</button>
+                          <input class="right-section__shipping__cart__input" type="text" value="1" min="1" max="1">
+                          <button class="right-section__shipping__cart__button" disabled> Add to Cart</button>
                         </div>
                         <div class="right-section__shipping__date">
                           <img src="/GoogleStore/src/views/img/Delivery.svg" alt="Delivery"> <p>Deliver 29 Apr to</p> <form id="postalCodeForm">

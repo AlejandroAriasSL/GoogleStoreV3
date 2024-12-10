@@ -1,8 +1,12 @@
 Réplica de la Google Store
-Aquí va un párrafo que describa lo que es el proyecto
+Este proyecto se trata de nuestra versión de la Google Store, en la que podemos encontrar diferentes productos.
 
-Comenzando 🚀
-Explicación
+Cómo funciona 🚀
+Desde el inicio podemos acceder a los diferentes productos a través del menú superior, en los que se incluyen un teléfono móvil, una tablet, unos auriculares y un reloj. Además, puedes iniciar sesión en Google. 
+
+En cada producto es posible elegir el color y las opciones propias de cada uno, siendo esto necesario para poder añadir dicho producto al carrito. Se puede navegar entre las distintas fotografías del producto para ver su diseño y estar seguros de que es aquello que deseamos. 
+
+Desde el pie de página podemos acceder a las redes sociales de Google y a la Privacidad y Términos propios de dicha empresa, siendo necesario volver atrás para volver a nuestra propia página.
 
 Construido con 🛠️
 Visual Studio Code - para desarrollar el código.

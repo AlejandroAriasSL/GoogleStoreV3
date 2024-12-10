@@ -29,10 +29,9 @@ main {
     display: flex;
     flex-direction: column;
     background-color: #ffff;
-    gap: 50px;
     max-width: 1440px;
     width: 90%;
-    height: 100vh;
+    height: 80%;
     margin: 0 auto;
     position: relative;
     top: 0;
@@ -134,15 +133,18 @@ main {
     max-height: 70%;
 }
 .right-section {
-
     overflow-y: auto; /* Activa el scroll vertical */
     scrollbar-width: none; /* Oculta la barra en Firefox */
     -ms-overflow-style: none;
 }
 
 .text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     grid-area: titleandprice;
     width: 100%;
+    height: 32%;
     box-shadow: 0 1px 0 #ccc; /* Línea de 2px simulada con sombra */
     margin-bottom: 30px;
 }
@@ -260,3 +262,55 @@ span:active {
     font-size: 20px;
     
   }
+
+  @media only screen and (max-width: 480px) {
+    main {
+        height: 80%;
+    }
+    .main-section {
+        height: 80%;
+        gap: 12px;
+    }
+    .main-section__arrow{
+        height: 3%;
+    }
+    .main-section__center {
+        grid-template-areas:
+            "carousel"
+            "titleandprice"
+            "steps";
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        height: 100%;
+    }
+    .right-section {
+        margin-top: 225px;
+    }
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        height: 55%;
+    }
+    .colors-section {
+        text-align: left;
+    }
+    .left-section__product__bg {
+        width: 100%;
+    }
+    .left-section__container {
+        display: none;
+    }
+    .left-section__wrapper {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+    .left-section__img {
+        max-width: 300px;
+        max-height: 200px;
+    }
+    .option-section {
+        margin-top: px;
+    }
+} 

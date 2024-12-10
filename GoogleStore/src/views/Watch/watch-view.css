@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -142,10 +142,7 @@ main {
     -ms-overflow-style: none;
 }
 .right-section__colors__options {
-    /* width: 40px; */
     height: 70px;
-    /* border-radius: 50px; */
-    /* border: 1px solid #00000096; */
     cursor: pointer;
 }
 .left-section__product {
@@ -266,3 +263,48 @@ button.selected {
     font-size: 20px;
     
   }
+
+  @media only screen and (max-width: 480px) {
+    main {
+        height: 80%;
+    }
+    .main-section__arrow {
+        margin-top: 5px;
+        height: 3%;
+    }
+    .main-section__center {
+        grid-template-areas:
+            "carousel"
+            "titleandprice"
+            "steps";
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        height: 100%;
+
+    }
+    .right-section {
+        height: 40%;
+        text-align: left;
+        margin-top: 200px;
+    }
+    .colors-section {
+        text-align: left;
+        height: 50%;
+        margin-bottom: 100px;
+    }
+    .left-section__product__bg {
+        width: 100%;
+    }
+    .left-section__container {
+        display: none;
+    }
+    .left-section__wrapper {
+        width: 100%;
+        justify-content: center;
+        margin: 0 !important 
+    }
+    .left-section__img {
+        max-width: 400px;
+        max-height: 200px;
+    }
+}

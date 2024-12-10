@@ -1,7 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let contador = null;
+
+  // Usar un setInterval para verificar si el elemento contador existe
+  const checkContadorInterval = setInterval(function() {
+    contador = document.getElementById("contador");
+
+    if (contador) {
+
+      contador.hidden = true;
+      // Si se encuentra el elemento, llamar a la función
+      actualizarContador();
+      clearInterval(checkContadorInterval); // Detener la verificación una vez encontrado
+    }
+  }, 100);
+  
+  
   // Seleccionamos las miniaturas (burbujas) y la imagen principal
-  const thumbnails = document.querySelectorAll(".left-section__bubble__img");
-  const centerImage = document.querySelector(".center-section__img");
+  const thumbnails = document.querySelectorAll(".left-section__bubbles__img");
+  const centerImage = document.querySelector(".left-section__img");
 
   // Evento para cambiar la imagen principal al hacer clic en las miniaturas
   thumbnails.forEach((thumbnail) => {
@@ -16,28 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Asociamos colores con imágenes principales y burbujas
   const imageMap = {
     dark: {
-      center: '/GoogleStore/src/views/img/FitbitNegro1.png', // Imagen principal para color oscuro
-      bubbles: [
-        '/GoogleStore/src/views/img/FitbitNegro1.png', // Imagen 1 para burbuja
-        '/GoogleStore/src/views/img/FitbitNegro2.png', // Imagen 2 para burbuja
-        '/GoogleStore/src/views/img/FitbitNegro3.png', // Imagen 3 para burbuja
-      ],
+      center: '/GoogleStore/src/views/img/FitbitInspire3Negro1.jpg', // Imagen principal para color oscuro
+
     },
     light: {
-      center: '/GoogleStore/src/views/img/FitbitPorcelana1.png', // Imagen principal para color claro
-      bubbles: [
-        '/GoogleStore/src/views/img/FitbitPorcelana1.png', // Imagen 1 para burbuja
-        '/GoogleStore/src/views/img/FitbitPorcelana2.png', // Imagen 2 para burbuja
-        '/GoogleStore/src/views/img/FitbitPorcelana3.png', // Imagen 3 para burbuja
-      ],
+      center: '/GoogleStore/src/views/img/FitbitInspire3Rosa1.jpg', // Imagen principal para color claro
+
     },
     warm: {
-      center: '/GoogleStore/src/views/img/FitbitNaranja1.png', // Imagen principal para color cálido
-      bubbles: [
-        '/GoogleStore/src/views/img/FitbitNaranja1.png', // Imagen 1 para burbuja
-        '/GoogleStore/src/views/img/FitbitNaranja2.png', // Imagen 2 para burbuja
-        '/GoogleStore/src/views/img/FitbitNaranja3.png', // Imagen 3 para burbuja
-      ],
+      center: '/GoogleStore/src/views/img/FitbitInspire3Naranja1.jpg', // Imagen principal para color cálido
+
     },
   };
 
@@ -46,19 +50,43 @@ document.addEventListener('DOMContentLoaded', () => {
     option.addEventListener('click', () => {
       const color = option.getAttribute('data-color'); // Obtenemos el color seleccionado
       const newImageSrc = imageMap[color].center; // Imagen principal para ese color
-      const bubbleImages = imageMap[color].bubbles; // Imágenes de burbujas para ese color
-
       // Cambiamos la imagen principal
       centerImage.src = newImageSrc;
-
-      // Actualizamos las miniaturas (burbujas)
-      thumbnails.forEach((thumbnail, index) => {
-        if (bubbleImages[index]) { // Evitamos errores si hay menos imágenes que burbujas
-          thumbnail.src = bubbleImages[index];
-        }
-      });
     });
   });
+
+const colorButtons = document.querySelectorAll(".colors-section__button");
+const shippingButton = document.querySelector(".right-section__shipping__cart__button");
+
+let producto = 0;
+
+function enableShippingButton() {
+  // Habilitar el botón de "Add to Cart"
+  shippingButton.removeAttribute("disabled");
+}
+
+function actualizarContador() {
+shippingButton.addEventListener('click', () => {
+producto++;
+if (producto > 0) {
+  contador.hidden = false;
+}
+contador.textContent = producto;
+});
+}
+
+colorButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        // Eliminar la clase 'selected' de todos los botones de color
+        colorButtons.forEach(btn => btn.classList.remove("selected"));
+
+        // Agregar la clase 'selected' al botón que fue clicado
+        button.classList.add("selected");
+
+        // Habilitar los botones de almacenamiento
+        enableShippingButton();
+    });
+});
 
 
   const form = document.getElementById('postalCodeForm');                        // Añadimos un evento 'submit' al formulario
@@ -71,3 +99,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 });
+

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 100); // Verificar cada 100ms
 
-  
+
   // Seleccionamos las miniaturas (burbujas) y la imagen principal
   const thumbnails = document.querySelectorAll(".left-section__bubbles__img");
   const centerImage = document.querySelector(".left-section__img");
@@ -109,19 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-/*
-const buttons = document.querySelectorAll(".colors-section__button");
-
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-      // Quitar la clase "active" de todos los botones
-      buttons.forEach(btn => btn.classList.remove("active"));
-      
-      // Añadir la clase "active" al botón presionado
-      button.classList.add("active");
-  });
-});
-*/
 
 
 const colorButtons = document.querySelectorAll(".right-section__colors__options");

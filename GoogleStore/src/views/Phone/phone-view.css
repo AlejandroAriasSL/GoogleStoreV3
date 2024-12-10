@@ -257,6 +257,7 @@ button.selected {
 }
 .right-section__shipping__cart__button:disabled{
     cursor: not-allowed;
+    background-color: grey;
 }
 .right-section__shipping__date {
     display: flex;

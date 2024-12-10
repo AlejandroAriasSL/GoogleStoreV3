@@ -245,6 +245,7 @@ span:active {
 }
 .right-section__shipping__cart__button:disabled{
     cursor: not-allowed;
+    background-color: grey;
 }
 #postalCode {
     border: none;
